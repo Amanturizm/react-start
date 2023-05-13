@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>React start</title>
+    <link rel="stylesheet" href="style.css">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://unpkg.com/babel-standalone/babel.min.js"></script>
+</head>
+<body>
+
+  <div id="root"></div>
+
+  <script type="text/babel">
+    export const Card = props => {
+      return (
+        <div className="card">
+          <img src={props.url} alt={props.name + "-image"} />
+          <div>
+            <h2>{props.name}</h2>
+            <p>{props.date}</p>
+          </div>
+        </div>
+      );
+    };
+
+    const top3 = (
+      <div className="top3">
+        <Card name="Steins;Gate" date="6 апреля 2011 года" url="https://m.media-amazon.com/images/I/514DSHCY2aL._AC_.jpg"/>
+        <Card name="JoJo’s Bizarre Adventure" date="5 октября 2012 года" url="https://m.media-amazon.com/images/I/7128HHk1h3L.jpg"/>
+        <Card name="Hunter × Hunter" date="2 октября 2011 года" url="https://sun9-30.userapi.com/impg/xI4LQF8Az3ZhpQTlRvWHamap610ujw56wqWQ3g/Oox7KU0kJ9c.jpg?size=1440x810&quality=96&sign=1e78cf6d5f7593fd3cb12b1860135ee4&type=album"/>
+      </div>
+    )
+
+    const root = document.querySelector('#root');
+    ReactDOM.createRoot(root).render(top3);
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+:root {
+    --flex-gap: 30px;
+    --max-width: 400px;
+    --width-img: 200px;
+}
+
+body {
+    background-color: #222;
+}
+
+.top3 {
+    max-width: calc(var(--max-width) * 2 + var(--flex-gap) + 7px);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--flex-gap);
+    margin: 0 auto;
+}
+
+.card {
+    max-width: var(--max-width);
+    max-height: 300px;
+    display: flex;
+    gap: 10px;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    font-family: "JetBrains Mono";
+    color: #ccc;
+    overflow: hidden;
+}
+
+.card img {
+    width: var(--width-img);
+}
+
+.card div {
+    padding: 10px;
+}
+
+.card:nth-child(3) {
+    max-width: 100%;
+    max-height: initial;
+}
+
+.card:nth-child(3) img {
+    width: 69%;
+}
