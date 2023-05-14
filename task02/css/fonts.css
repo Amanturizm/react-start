@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'Font Awesome 6 Brands';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url('../webfonts/fa-brands-400.woff2') format('woff2');
+}
+
+.fa-brands {
+  font-family: 'Font Awesome 6 Brands';
+  font-style: normal;
+  font-weight: 400;
+}
+
+.fa-facebook-f:before {
+  content: '\f39e';
+}
+
+.fa-google-plus-g:before {
+  content: '\f0d5';
+}
+
+.fa-twitter:before {
+  content: '\f099';
+}
+
+.fa-linkedin:before {
+  content: '\f08c';
+}
